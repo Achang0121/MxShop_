@@ -1,0 +1,6 @@
+django==2.2
+pillow
+mysqlclient
+djangorestframework
+markdown
+django-filter
