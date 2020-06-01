@@ -69,15 +69,15 @@ class Goods(models.Model):
     category = models.ForeignKey(GoodsCategory, verbose_name="商品类目", on_delete=models.CASCADE)
     goods_sn = models.CharField(max_length=50, default="", verbose_name="商品唯一货号")
     name = models.CharField(max_length=100, verbose_name="商品名")
-    click_nums = models.IntegerField(default=0, verbose_name="点击数")
-    sold_nums = models.IntegerField(default=0, verbose_name="商品销售量")
-    fav_nums = models.IntegerField(default=0, verbose_name="收藏数")
-    goods_nums = models.IntegerField(default=0, verbose_name="库存数")
+    click_num = models.IntegerField(default=0, verbose_name="点击数")
+    sold_num = models.IntegerField(default=0, verbose_name="商品销售量")
+    fav_num = models.IntegerField(default=0, verbose_name="收藏数")
+    goods_num = models.IntegerField(default=0, verbose_name="库存数")
     market_price = models.FloatField(default=0, verbose_name="市场价格")
     shop_price = models.FloatField(default=0, verbose_name="本店价格")
     goods_brief = models.TextField(max_length=500, verbose_name="商品简短描述")
     goods_desc = UEditorField(
-        verbose_name=u"内容",
+        verbose_name="内容",
         imagePath="goods/images/",
         width=1000,
         height=300,
@@ -120,7 +120,7 @@ class Banner(models.Model):
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
     
     class Meta:
-        verbose_name = "商品商品"
+        verbose_name = "轮播商品"
         verbose_name_plural = verbose_name
     
     def __str__(self):
