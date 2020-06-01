@@ -15,8 +15,7 @@ class GoodsCategory(models.Model):
     name = models.CharField(max_length=30, default="", verbose_name="类别名", help_text="类别名")
     code = models.CharField(max_length=30, default="", verbose_name="类别code", help_text="类别code")
     desc = models.CharField(max_length=100, default="", verbose_name="类别描述", help_text="类别描述")
-    category_type = models.CharField(
-        max_length=10,
+    category_type = models.IntegerField(
         choices=CATEGORY_TYPE,
         default=1,
         verbose_name="类别类型",
