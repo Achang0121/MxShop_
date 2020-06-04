@@ -32,6 +32,11 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'users.UserProfile'
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'guardian.backends.ObjectPermissionBackend',
+)
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -51,6 +56,9 @@ INSTALLED_APPS = [
     'xadmin.apps.XAdminConfig',
     'crispy_forms',
     'reversion',
+    'guardian',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +72,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'MxShop.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
 
 TEMPLATES = [
     {

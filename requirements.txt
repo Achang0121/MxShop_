@@ -4,3 +4,6 @@ mysqlclient
 djangorestframework
 markdown
 django-filter
+django-guardian
+coreapi
+Pygments
