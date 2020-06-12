@@ -4,6 +4,8 @@ mysqlclient
 djangorestframework
 markdown
 django-filter
+django-cors-headers
 django-guardian
 coreapi
 Pygments
+djangorestframework-jwt
