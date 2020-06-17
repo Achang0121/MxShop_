@@ -94,6 +94,8 @@ REST_FRAMEWORK = {
     # 'PAGE_SIZE': 10,
 }
 
+REGEX_MOBILE = r'^1[358]\d{9}$|^147\d{8}$|^176\d{8}$'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -164,3 +166,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 云片网设置
+
+YUN_PIAN_API_KEY = 'c4b78087a609b8d150564a04e971fe99'

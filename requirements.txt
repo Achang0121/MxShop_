@@ -9,3 +9,4 @@ django-guardian
 coreapi
 Pygments
 djangorestframework-jwt
+requests
